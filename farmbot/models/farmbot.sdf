@@ -1,0 +1,183 @@
+<sdf version='1.7'>
+  <model name='Farmbot_v2'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.225594 0.309521 0.421446 0 -0 0</pose>
+        <mass>17.331</mass>
+        <inertia>
+          <ixx>0.216565</ixx>
+          <ixy>6.28258e-08</ixy>
+          <ixz>-3.05067e-08</ixz>
+          <iyy>0.46182</iyy>
+          <iyz>9.62708e-08</iyz>
+          <izz>0.65942</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BackRightJoint' type='revolute'>
+      <pose relative_to='base_link'>0.006205 -0.41971 0.015678 0 0 -3.1289</pose>
+      <parent>base_link</parent>
+      <child>BackRight</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BackRight'>
+      <pose relative_to='BackRightJoint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.039986 0 -0 0</pose>
+        <mass>3.32166</mass>
+        <inertia>
+          <ixx>0.0164283</ixx>
+          <ixy>-1.28892e-10</ixy>
+          <ixz>1.32061e-09</ixz>
+          <iyy>0.0164283</iyy>
+          <iyz>-6.22008e-10</iyz>
+          <izz>0.0296915</izz>
+        </inertia>
+      </inertial>
+      <collision name='BackRight_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/BackRight.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BackRight_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/BackRight.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FrontLeftJoint' type='revolute'>
+      <pose relative_to='base_link'>0.44821 -0.41971 0.43791 -3.14159 0 0</pose>
+      <parent>base_link</parent>
+      <child>FrontLeft</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FrontLeft'>
+      <pose relative_to='FrontLeftJoint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 -0.12547 0 -0 0</pose>
+        <mass>3.3217</mass>
+        <inertia>
+          <ixx>0.016428</ixx>
+          <ixy>6.2974e-10</ixy>
+          <ixz>-8.8368e-10</ixz>
+          <iyy>0.016428</iyy>
+          <iyz>-1.161e-09</iyz>
+          <izz>0.029692</izz>
+        </inertia>
+      </inertial>
+      <collision name='FrontLeft_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/FrontLeft.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FrontLeft_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/FrontLeft.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FrontRightJoint' type='revolute'>
+      <pose relative_to='base_link'>0.44821 -0.41971 0.015678 0 -0 1.776</pose>
+      <parent>base_link</parent>
+      <child>FrontRight</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FrontRight'>
+      <pose relative_to='FrontRightJoint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0 0.039986 0 -0 0</pose>
+        <mass>3.3217</mass>
+        <inertia>
+          <ixx>0.016428</ixx>
+          <ixy>1.1613e-10</ixy>
+          <ixz>6.1284e-10</ixz>
+          <iyy>0.016428</iyy>
+          <iyz>1.3241e-09</iyz>
+          <izz>0.029692</izz>
+        </inertia>
+      </inertial>
+      <collision name='FrontRight_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/FrontRight.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FrontRight_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://farmbot/meshes/FrontRight.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

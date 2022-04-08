@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Farmbot_v2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <link name="base_footprint"/>
+  <joint name="base_joint" type="fixed">
+
+    <parent link="base_footprint"/>         
+    <child link="base_link"/>
+    <axis xyz="0 0 0" /> 
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.225593527834761 0.309520672229625 0.421445940738647"
+        rpy="0 0 0" />
+      <mass
+        value="17.3309961285168" />
+      <inertia
+        ixx="0.216565207577632"
+        ixy="6.28258362894764E-08"
+        ixz="-3.05066920497308E-08"
+        iyy="0.461820225126058"
+        iyz="9.62708104215544E-08"
+        izz="0.659420133120039" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/base_link.stl" />
+        <cylinder radius="0.09" length="0.09"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.92156862745098 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/base_link.stl" />
+        <cylinder radius="0.09" length="0.09"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link
+    name="FrontRight">
+    <inertial>
+      <origin
+        xyz="-1.5259E-09 1.3348E-09 0.039986"
+        rpy="0 0 0" />
+      <mass
+        value="3.3217" />
+      <inertia
+        ixx="0.016428"
+        ixy="1.1613E-10"
+        ixz="6.1284E-10"
+        iyy="0.016428"
+        iyz="1.3241E-09"
+        izz="0.029692" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/FrontRight.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/FrontRight.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightJoint"
+    type="continuous">
+    <origin
+      xyz="0.44821 -0.41971 0.015678"
+      rpy="0 0 1.776" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontRight" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.1" velocity="0.005"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+
+  <link
+    name="FrontLeft">
+    <inertial>
+      <origin
+        xyz="1.2025E-09 -1.6321E-09 -0.12547"
+        rpy="0 0 0" />
+      <mass
+        value="3.3217" />
+      <inertia
+        ixx="0.016428"
+        ixy="6.2974E-10"
+        ixz="-8.8368E-10"
+        iyy="0.016428"
+        iyz="-1.161E-09"
+        izz="0.029692" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/FrontLeft.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/FrontLeft.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftJoint"
+    type="continuous">
+    <origin
+      xyz="0.44821 -0.41971 0.43791"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontLeft" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0.1" velocity="0.005"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+
+  <link
+    name="BackLeft">
+    <inertial>
+      <origin
+        xyz="1.35102428289874E-09 1.52821666432601E-09 0.0399856152906295"
+        rpy="0 0 0" />
+      <mass
+        value="3.32166178139039" />
+      <inertia
+        ixx="0.0164282687605719"
+        ixy="-1.28891876894342E-10"
+        ixz="1.32061447509444E-09"
+        iyy="0.0164282662716864"
+        iyz="-6.22007951372485E-10"
+        izz="0.029691524931495" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/BackLeft.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/BackLeft.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftJoint"
+    type="continuous">
+    <origin
+      xyz="0.00620504049529311 -0.419708648484776 0.437905569308333"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackLeft" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0.1" velocity="0.005"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="BackRight">
+    <inertial>
+      <origin
+        xyz="1.35102428289874E-09 1.52821666432601E-09 0.0399856152906295"
+        rpy="0 0 0" />
+      <mass
+        value="3.32166178139039" />
+      <inertia
+        ixx="0.0164282687605719"
+        ixy="-1.28891876894342E-10"
+        ixz="1.32061447509444E-09"
+        iyy="0.0164282662716864"
+        iyz="-6.22007951372485E-10"
+        izz="0.029691524931495" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/BackRight.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farmbot/meshes/BackRight.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightJoint"
+    type="continuous">
+    <origin
+      xyz="0.006205 -0.41971 0.015678"
+      rpy="0 0 -3.1289" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackRight" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.1" velocity="0.005"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+  <gazebo>
+    <plugin name="wheel_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+      <!-- wheels -->
+      <num_wheel_pairs>2</num_wheel_pairs>
+      <left_joint>FrontLeftJoint</left_joint>
+      <left_joint>BackLeftJoint</left_joint>
+      <right_joint>FrontRightJoint</right_joint>
+      <right_joint>BackRightJoint</right_joint>
+
+
+      <!-- kinematics -->
+      <wheel_separation>0.44</wheel_separation>
+      <wheel_diameter>0.13335</wheel_diameter>
+      <max_wheel_torque>20.0</max_wheel_torque>
+      <max_wheel_acceleration>10.0</max_wheel_acceleration>
+
+      <!-- odometry  --> 
+      <odometry_source>world</odometry_source>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+
+
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <update_rate>100.0</update_rate>
+    </plugin>
+  </gazebo>
+  <ros2_control name="GazeboSystem" type="system">
+    <transmission name="FrontLeftTransmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="FrontLeftJoint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="FrontLeftMotor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>50</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="FrontRightTransmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="FrontRightJoint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="FrontRightMotor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>50</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="BackLeftTransmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="BackLeftJoint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="BackLeftMotor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>50</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="BackRightTransmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="BackRightJoint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="BackRightMotor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>50</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+  </ros2_control>
+</robot>
