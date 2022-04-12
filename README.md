@@ -8,14 +8,14 @@ Open a terminal under workplace, and type
 ```
 Don't forget to do this process when creating a new terminal!  
 ## Structure
-└── farmbot      #package name
-    ├── config   #rviz file
-    ├── farmbot  
-    ├── launch   
-    ├── meshes   #model components
-    ├── models   #urdf file
-    ├── resource 
-    ├── test
+└── farmbot      #package name  
+    ├── config   #rviz file  
+    ├── farmbot    
+    ├── launch     
+    ├── meshes   #model components  
+    ├── models   #urdf file  
+    ├── resource   
+    ├── test  
     └── world    #gazebo world  
 ## Environment
 ROS2 foxy  
