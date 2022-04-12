@@ -10,8 +10,8 @@ Don't forget to do this process when creating a new terminal!
 ## Structure
 └── farmbot  
     ├── config  
-    ├── farmbot    
-    ├── launch     
+    ├── farmbot  
+    ├── launch  
     ├── meshes  
     ├── models  
     ├── resource  
