@@ -24,7 +24,7 @@ Ubuntu20.04
 ROS2 foxy  
 Gazebo11  
 python3  
-### Dependencies
+##### Dependencies
 Please make sure the environment include dependencies below  
 ```
 ros-foxy-robot-localization  
