@@ -20,9 +20,17 @@ Don't forget to do this process when creating a new terminal!
     └── world    #gazebo world file
 ```
 ## Environment
+Ubuntu20.04
 ROS2 foxy  
-Gazebo  
+Gazebo11  
 python3  
+### Dependencies
+Please make sure the environment include dependencies below  
+```
+ros-foxy-robot-localization  
+ros-foxy-ros2-control  
+ros-foxy-ros2-controllers
+```
 ## Teleop
 This step is to control the model with keyboard.  
 The main idea is to connect the model with "/cmd_vel" and "/odom", which can allow builtin teleop to control.  
