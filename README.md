@@ -45,6 +45,7 @@ Please make sure the environment include dependencies below
 ros-foxy-robot-localization  
 ros-foxy-ros2-control  
 ros-foxy-ros2-controllers
+pip3 install transforms3d
 ```
 ## Teleop
 This step is to control the model with keyboard.  
