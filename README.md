@@ -7,6 +7,20 @@ Open a terminal under workplace, and type
 . install/setup.bash
 ```
 Don't forget to do this process when creating a new terminal!  
+Furthermore, please export the path under bashrc  
+```bash
+gedit ~/.bashrc
+```
+and add the path under your_workspace/src  
+```
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path to your model>
+```
+Finally, in order to make sure model components can be read by Gazebo  
+Copy the package under the gazebo default path  
+Open the terminal under your_workspace/src, and type  
+```bash
+cp -r farmbot ~/.gazebo/models
+```
 ## Structure
 ```
 └── farmbot      #package name
