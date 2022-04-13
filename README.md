@@ -12,6 +12,7 @@ Furthermore, please export the path under bashrc
 gedit ~/.bashrc
 ```
 and add the path under your_workspace/src  
+For example, path to your model: home/your_user_name/your_workspace/src/farmbot/meshes
 ```
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path to your model>
 ```
